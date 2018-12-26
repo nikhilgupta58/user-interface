@@ -1,5 +1,4 @@
 document.getElementsByClassName("click")[0].hidden = true;
-
 document.getElementsByClassName("button")[0].onclick = e => {
   document.querySelector(".button div:nth-child(2)").style.animation =
     "buttonfly .5s linear 0s forwards";
@@ -9,6 +8,10 @@ document.getElementsByClassName("button")[0].onclick = e => {
 
   document.querySelector(".button div:nth-child(3)").style.animation =
     "buttonfly .5s linear 0.4s forwards";
+
+  setTimeout(function() {
+    document.querySelector(".wavee").style.animation = "wave 0.3s linear";
+  }, 400);
 
   setTimeout(function() {
     document.getElementsByClassName("ux")[0].hidden = true;
@@ -25,6 +28,10 @@ document.getElementsByClassName("button")[0].onclick = e => {
 document.getElementsByClassName("but")[0].onclick = e => {
   document.querySelector(".but div:nth-child(1)").style.animation =
     "butfly .5s linear 0.1s forwards";
+
+  setTimeout(function() {
+    document.querySelector(".wavee").style.animation = "waveb 0.3s linear";
+  }, 400);
 
   setTimeout(function() {
     document.getElementsByClassName("click")[0].hidden = true;
