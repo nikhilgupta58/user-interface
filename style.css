@@ -1,0 +1,231 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-color: #262626;
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  position: relative;
+  width: 350px;
+  height: 500px;
+  box-shadow: -10px 10px 6px 0 rgba(0, 0, 0, 0.507);
+  border-radius: 5px;
+}
+
+.ux {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+}
+
+.fas {
+  position: absolute;
+  top: 50%;
+  color: rgba(0, 0, 255, 0.678);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+}
+
+.fas:hover {
+  color: rgba(255, 68, 0, 0.705);
+  transition: 0.5s;
+}
+
+.ux .button {
+  position: relative;
+  top: 0%;
+  right: -80%;
+  margin: 30px 15px;
+  transform-origin: top center;
+  transform: rotate(45deg);
+  height: 42px;
+  width: 42px;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+.ux .button div {
+  position: absolute;
+  background-color: currentColor;
+  transition: 0.2s;
+}
+
+.ux .button div:nth-child(1) {
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  height: 21px;
+  width: 3px;
+}
+
+.ux .button div:nth-child(2) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 42px;
+  width: 3px;
+}
+
+.ux .button div:nth-child(3) {
+  top: 50%;
+  right: 20%;
+  transform: translate(-50%, -50%);
+  height: 21px;
+  width: 3px;
+}
+
+.ux .button:hover {
+  cursor: -webkit-grab;
+  color: rgba(255, 255, 255, 0.507);
+  transition: 0.2s;
+}
+
+/* NEXT SCREEN */
+
+.click {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.788);
+}
+
+.click ul {
+  position: absolute;
+  list-style: none;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+.click ul li {
+  margin: 50px 20px;
+}
+
+.click .but {
+  position: relative;
+  right: -73%;
+  margin: 25px 30px;
+  height: 42px;
+  width: 42px;
+  color: rgba(0, 0, 0, 0.897);
+}
+
+.click .but div {
+  position: absolute;
+  background-color: currentColor;
+  transition: 0.2s;
+}
+
+.click .but div:nth-child(1) {
+  top: 50%;
+  left: 50%;
+  transform-origin: top center;
+  transform: rotate(45deg) translate(-50%, -50%);
+  height: 40px;
+  width: 3px;
+}
+
+.click .but div:nth-child(2) {
+  top: 50%;
+  left: 50%;
+  transform-origin: top center;
+  transform: rotate(135deg) translate(-50%, -50%);
+  height: 40px;
+  width: 3px;
+}
+
+.click .but:hover {
+  cursor: -webkit-grab;
+  color: rgba(0, 0, 0, 0.548);
+  transition: 0.2s;
+}
+
+.click ul li:hover {
+  color: rgba(0, 0, 0, 0.856);
+}
+
+.click ul li:before {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.click ul li:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+
+.click ul li:nth-child(1)::before {
+  top: 75px;
+  left: 60px;
+  width: 50px;
+  height: 2px;
+}
+
+.click ul li:nth-child(2)::before {
+  top: 150px;
+  left: 60px;
+  width: 130px;
+  height: 2px;
+}
+
+.click ul li:nth-child(3)::before {
+  top: 225px;
+  left: 60px;
+  width: 70px;
+  height: 2px;
+}
+
+.click ul li:nth-child(4)::before {
+  top: 300px;
+  left: 60px;
+  width: 50px;
+  height: 2px;
+}
+
+@keyframes buttonfly {
+  100% {
+    transform: translate(1px, -120px);
+  }
+}
+
+@keyframes butfly {
+  100% {
+    transform: translate(135px, -160px);
+  }
+}
+
+@keyframes butmov {
+  0% {
+    transform: rotate(135deg) translate(-30px, 250px);
+  }
+  100% {
+    transform: rotate(135deg) translate(0px, -20px);
+  }
+}
+
+@keyframes buttonmov {
+  0% {
+    transform: translate(0px, -200px);
+  }
+  100% {
+    transform: translate(0px, -20px);
+  }
+}
